@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Email } from '../icon/Email';
 import { Facebook } from '../icon/Facebook';
 import { Instagram } from '../icon/Instagram';
 import { Whatsapp } from '../icon/Whatsapp';
 import { useToggle } from '../hooks/useToggle';
-import { Dropdown } from './Dropdown';
+import { Menu } from './Menu';
 
 export const Navbar = () => {
   const [openState, setOpenState] = useToggle();
+  const menuBtnRef = useRef();
 
   return (
     <>
-      <nav className="bg-white shadow dark:bg-zinc-800 w-full fixed">
+      <nav className="bg-white shadow dark:bg-zinc-800 w-full lg:fixed">
         <div className="container px-6 py-4 mx-auto">
           <div className="lg:flex lg:items-center">
             <div className="flex items-center justify-between">
@@ -72,13 +73,24 @@ export const Navbar = () => {
                   : ' opacity-0 -translate-x-full')
               }
             >
-              <div className="flex flex-col text-zinc-600 capitalize dark:text-zinc-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
-                <NavLink
-                  to="products"
-                  className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
+              <div className="flex flex-col text-zinc-600 dark:text-zinc-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+                <a
+                  href="https://pricelist.justifyprint.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
+                >
+                  pricelist
+                </a>
+                {/* <button
+                  onClick={() => {
+                    setOpenState();
+                    menuBtnRef.current.toggle();
+                  }}
+                  className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
                 >
                   products
-                </NavLink>
+                </button> */}
               </div>
 
               <div className="flex justify-center items-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
@@ -90,7 +102,7 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
-        <Dropdown visibility={false}></Dropdown>
+        {/* <Menu ref={menuBtnRef}></Menu> */}
       </nav>
     </>
   );

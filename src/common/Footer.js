@@ -7,25 +7,26 @@ import { Whatsapp } from '../icon/Whatsapp';
 export const Footer = () => {
   return (
     <footer className="bg-white dark:bg-zinc-900">
-      <div className="container px-6 pb-8 pt-16 mx-auto">
+      <div className="container px-6 py-8 mx-auto">
+        <hr className="my-10 border-zinc-200 dark:border-zinc-700" />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div></div>
           <div>
             <FooterCategory content="product" />
-            <FooterLink content="business card" link="/business-card" />
-            <FooterLink content="business card" link="/business-card" />
-            <FooterLink content="business card" link="/business-card" />
-            <FooterLink content="business card" link="/business-card" />
-            <FooterLink content="business card" link="/business-card" />
+            <FooterLink
+              content="pricelist"
+              link="https://pricelist.justifyprint.com"
+            />
           </div>
 
-          <div>
+          {/* <div>
             <FooterCategory content="support" />
             <FooterLink content="FAQ" link="/faq" />
             <FooterLink
               content="contact justifyPrint"
               link="mailto:justifyprint@gmail.com"
             />
-          </div>
+          </div> */}
 
           <div>
             <FooterCategory content="company" />
@@ -38,9 +39,22 @@ export const Footer = () => {
                 solutions in Singapore.
               </span>
             </div>
+            <div>
+              <span className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300">
+                Contact: +65 9227 5169
+              </span>
+              <a
+                href="mailto:justifyprint@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300"
+              >
+                Email: justifyprint@gmail.com
+              </a>
+            </div>
           </div>
         </div>
-        <hr className="my-10 border-zinc-200 dark:border-zinc-700" />
+        <hr className="mt-10 mb-4 border-zinc-200 dark:border-zinc-700" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <p className="text-sm text-zinc-400">
             © {new Date().getFullYear()} Justify Print

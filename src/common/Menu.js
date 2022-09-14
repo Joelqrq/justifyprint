@@ -1,11 +1,14 @@
 import React from 'react';
+import { withVisibility } from './withVisibility';
 
-export const Dropdown = ({visibility}) => {
-
+export const Menu = withVisibility((props) => {
   return (
     <div
       id="mega-menu-full-dropdown"
-      className={"mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600" + (visibility ? ' block' : ' hidden')}
+      className={
+        'absolute inset-x-0 mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 transition-all duration-300 ease-in-out' +
+        (props.visibility ? ' translate-x-0 opacity-100' : ' opacity-0 -translate-x-full')
+      }
     >
       <div className="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
         <ul aria-labelledby="mega-menu-full-dropdown-button">
@@ -116,4 +119,4 @@ export const Dropdown = ({visibility}) => {
       </div>
     </div>
   );
-};
+});
