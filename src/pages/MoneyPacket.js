@@ -20,7 +20,7 @@ const MoneyPacket = () => {
     <div className="container px-6 py-10 mx-auto space-y-6">
       <div className="gallery">
         <div className="gallery__column">
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mpmodel}
@@ -29,9 +29,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp1}
@@ -40,9 +40,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp2}
@@ -51,11 +51,11 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
         </div>
 
         <div className="gallery__column">
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp3}
@@ -64,9 +64,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp4}
@@ -75,9 +75,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp5}
@@ -86,11 +86,11 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
         </div>
 
         <div className="gallery__column">
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp6}
@@ -99,9 +99,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp7}
@@ -110,9 +110,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp8}
@@ -121,11 +121,11 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
         </div>
 
         <div className="gallery__column">
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp9}
@@ -134,9 +134,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp10}
@@ -145,9 +145,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp11}
@@ -156,9 +156,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp12}
@@ -167,9 +167,9 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
 
-          <a className="gallery__link cursor-pointer">
+          <button className="gallery__link cursor-pointer">
             <figure className="gallery__thumb">
               <img
                 src={mp13}
@@ -178,7 +178,7 @@ const MoneyPacket = () => {
               />
               <figcaption className="gallery__caption"></figcaption>
             </figure>
-          </a>
+          </button>
         </div>
       </div>
     </div>

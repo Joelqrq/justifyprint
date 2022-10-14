@@ -1,15 +1,14 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Email } from '../icon/Email';
 import { Facebook } from '../icon/Facebook';
 import { Instagram } from '../icon/Instagram';
 import { Whatsapp } from '../icon/Whatsapp';
 import { useToggle } from '../hooks/useToggle';
-import { Menu } from './Menu';
 
 export const Navbar = () => {
   const [openState, setOpenState] = useToggle();
-  const menuBtnRef = useRef();
+  // const menuBtnRef = useRef();
 
   return (
     <>

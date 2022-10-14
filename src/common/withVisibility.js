@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useImperativeHandle } from 'react';
+import React, { forwardRef, useImperativeHandle } from 'react';
 import { useToggle } from '../hooks/useToggle';
 
 export const withVisibility = (Component) =>

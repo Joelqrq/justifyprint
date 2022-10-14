@@ -1,6 +1,4 @@
 import React from 'react';
-import { Email } from '../icon/Email';
-import { Facebook } from '../icon/Facebook';
 
 export const Feature = () => {
   return (
