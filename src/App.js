@@ -5,6 +5,7 @@ import { Navbar } from './common/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Landing } from './landing/Landing';
 import { Footer } from './common/Footer';
+import MoneyPacket from './pages/MoneyPacket';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="products" element={<Header></Header>} />
+              <Route path="moneypacket" element={<MoneyPacket></MoneyPacket>} />
             </Routes>
           </div>
           <Footer></Footer>

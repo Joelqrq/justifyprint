@@ -10,7 +10,7 @@ export const Feature = () => {
           <div>
             <div className="h-8">
               <a
-                href="https://wa.me/6583836057"
+                href="https://wa.me/6592275169"
                 target="_blank"
                 rel="noopener noreferrer"
               >

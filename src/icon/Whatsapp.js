@@ -4,7 +4,7 @@ export const Whatsapp = () => {
   return (
     <a
       className="mx-2"
-      href="https://wa.me/6583836057"
+      href="https://wa.me/6592275169"
       target="_blank"
       rel="noopener noreferrer"
     >
