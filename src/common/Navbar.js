@@ -22,7 +22,8 @@ export const Navbar = () => {
                   to="/"
                   className="text-2xl font-bold text-zinc-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-zinc-700 dark:hover:text-zinc-300"
                 >
-                  Justify Print
+                  <img className="h-14"
+                    src="https://joelqrq.github.io/justifyprint-pricelist-warehouse/logo/justifyprint.png" alt="homepage" />
                 </NavLink>
               </div>
 
