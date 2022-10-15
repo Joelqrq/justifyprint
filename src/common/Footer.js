@@ -35,7 +35,7 @@ export const Footer = () => {
                 Justify Print
               </span>
               <span className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300">
-                We brings you the cheapest and most affordable printing
+                We bring you the cheapest and most affordable printing
                 solutions in Singapore.
               </span>
             </div>

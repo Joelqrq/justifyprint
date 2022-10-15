@@ -9,7 +9,7 @@ export const Email = () => {
       rel="noopener noreferrer"
     >
       <svg
-        className="h-6 stroke-zinc-600 transition-colors duration-300 hover:stroke-zinc-400"
+        className="h-6 stroke-zinc-600 dark:stroke-white transition-colors duration-300 hover:stroke-zinc-400"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

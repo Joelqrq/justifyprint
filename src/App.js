@@ -49,7 +49,7 @@ function App() {
         </Helmet>
         <BrowserRouter>
           <Navbar></Navbar>
-          <div className="pt-16 min-h-[500px]">
+          <div className="pt-16 min-h-[500px] bg-white dark:bg-zinc-900">
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="products" element={<Header></Header>} />
