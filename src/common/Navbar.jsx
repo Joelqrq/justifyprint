@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white shadow dark:bg-zinc-800 w-full lg:fixed">
+      <nav className="bg-white shadow dark:bg-zinc-800 w-full lg:fixed z-10">
         <div className="container px-6 py-4 mx-auto">
           <div className="lg:flex lg:items-center">
             <div className="flex items-center justify-between">
@@ -96,6 +96,12 @@ export const Navbar = () => {
                   className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
                 >
                   money packet
+                </NavLink>
+                <NavLink
+                  to="box-customization"
+                  className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
+                >
+                  box customization
                 </NavLink>
               </div>
               <div className="flex justify-center items-center mt-6 lg:flex lg:mt-0 lg:-mx-2">

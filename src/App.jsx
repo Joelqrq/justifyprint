@@ -5,7 +5,8 @@ import { Navbar } from './common/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Landing } from './landing/Landing';
 import { Footer } from './common/Footer';
-import MoneyPacket from './pages/MoneyPacket';
+import MoneyPacket from './pages/MoneyPacket/MoneyPacket';
+import { BoxCustomization } from './pages/BoxCustomization/BoxCustomization';
 
 function App() {
   return (
@@ -49,11 +50,15 @@ function App() {
         </Helmet>
         <BrowserRouter>
           <Navbar></Navbar>
-          <div className="pt-16 min-h-[500px] bg-white dark:bg-zinc-900">
+          <div className="mx-auto pt-24 min-h-[500px] bg-white dark:bg-zinc-900">
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="products" element={<Header></Header>} />
               <Route path="moneypacket" element={<MoneyPacket></MoneyPacket>} />
+              <Route
+                path="box-customization"
+                element={<BoxCustomization></BoxCustomization>}
+              />
             </Routes>
           </div>
           <Footer></Footer>
