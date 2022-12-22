@@ -50,7 +50,7 @@ function App() {
         </Helmet>
         <BrowserRouter>
           <Navbar></Navbar>
-          <div className="mx-auto pt-24 min-h-[500px] bg-white dark:bg-zinc-900">
+          <div className="mx-auto pt-6 lg:pt-24 min-h-[500px] bg-white dark:bg-zinc-900">
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="products" element={<Header></Header>} />

@@ -18,11 +18,12 @@ import mp13 from '@assets/images/moneypacket/MP13.jpg';
 const galleryID = 'bc-gallery-1';
 const MoneyPacket = () => {
   return (
-    <div className="container px-6 py-10 mx-auto">
+    <div className="container px-6 lg:py-10 mx-auto">
+      <span className="block mx-auto mb-4 max-w-fit text-2xl tracking-wide">Money Packet</span>
       <Gallery
         galleryID={galleryID}
         breakpoints={{ lg: 1200 }}
-        cols={{ lg: 10 }}
+        cols={{ lg: 10, sm: 10, xs: 4, xxs: 2 }}
         rowHeight={30}
         images={[
           {
@@ -98,6 +99,22 @@ const MoneyPacket = () => {
             { x: 6, y: 2, w: 2, h: 10, i: galleryID + '-' + 8 + '-wrapper' },
             { x: 6, y: 9, w: 2, h: 6, i: galleryID + '-' + 12 + '-wrapper' },
             { x: 8, y: 0, w: 2, h: 15, i: galleryID + '-' + 13 + '-wrapper' },
+          ],
+          xs: [
+            { x: 0, y: 0, w: 2, h: 6, i: galleryID + '-' + 0 + '-wrapper' },
+            { x: 0, y: 3, w: 2, h: 6, i: galleryID + '-' + 1 + '-wrapper' },
+            { x: 0, y: 8, w: 2, h: 6, i: galleryID + '-' + 3 + '-wrapper' },
+            { x: 0, y: 11, w: 2, h: 6, i: galleryID + '-' + 4 + '-wrapper' },
+            { x: 2, y: 0, w: 2, h: 10, i: galleryID + '-' + 2 + '-wrapper' },
+            { x: 2, y: 10, w: 2, h: 6, i: galleryID + '-' + 9 + '-wrapper' },
+            { x: 2, y: 16, w: 2, h: 6, i: galleryID + '-' + 6 + '-wrapper' },
+            { x: 0, y: 0, w: 2, h: 6, i: galleryID + '-' + 7 + '-wrapper' },
+            { x: 0, y: 3, w: 2, h: 6, i: galleryID + '-' + 11 + '-wrapper' },
+            { x: 0, y: 6, w: 2, h: 10, i: galleryID + '-' + 5 + '-wrapper' },
+            { x: 2, y: 0, w: 2, h: 6, i: galleryID + '-' + 10 + '-wrapper' },
+            { x: 2, y: 2, w: 2, h: 10, i: galleryID + '-' + 8 + '-wrapper' },
+            { x: 0, y: 9, w: 2, h: 6, i: galleryID + '-' + 12 + '-wrapper' },
+            { x: 2, y: 0, w: 2, h: 15, i: galleryID + '-' + 13 + '-wrapper' },
           ],
         }}
       ></Gallery>
