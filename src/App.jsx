@@ -13,14 +13,14 @@ function App() {
     <HelmetProvider>
       <div className="App">
         <Helmet>
-          <title>Justify Print</title>
+          <title>Justify Print — Affordable and quality printing solutions</title>
           <meta
             name="title"
-            content="Justify Print — Cheapest and most affordable printing solutions"
+            content="Justify Print — Affordable and quality printing solutions"
           />
           <meta
             name="description"
-            content="Justify Print brings you the cheapest and most affordable printing solutions in Singapore."
+            content="Justify Print brings you the affordable and quality printing solutions in Singapore."
           />
           <link rel="canonical" href="https://justifyprint.com" />
 
@@ -28,11 +28,11 @@ function App() {
           <meta property="og:url" content="https://justifyprint.com/" />
           <meta
             property="og:title"
-            content="Justify Print — Cheapest and most affordable printing solutions"
+            content="Justify Print — Affordable and quality printing solutions"
           />
           <meta
             property="og:description"
-            content="Justify Print brings you the cheapest and most affordable printing solutions in Singapore."
+            content="Justify Print brings you the affordable and quality printing solutions in Singapore."
           />
           {/* <meta property="og:image" content="" /> */}
 
@@ -40,11 +40,11 @@ function App() {
           <meta property="twitter:url" content="https://justifyprint.com/" />
           <meta
             property="twitter:title"
-            content="Justify Print — Cheapest and most affordable printing solutions"
+            content="Justify Print — Affordable and quality printing solutions"
           />
           <meta
             property="twitter:description"
-            content="Justify Print brings you the cheapest and most affordable printing solutions in Singapore."
+            content="Justify Print brings you the affordable and quality printing solutions in Singapore."
           />
           {/* <meta property="twitter:image" content="" /> */}
         </Helmet>
