@@ -19,7 +19,7 @@ const galleryID = 'bc-gallery-1';
 const MoneyPacket = () => {
   return (
     <div className="container px-6 lg:py-10 mx-auto">
-      <span className="block mx-auto mb-4 max-w-fit text-2xl tracking-wide">Money Packet</span>
+      <span className="block mx-auto mb-4 max-w-fit text-2xl text-zinc-800 dark:text-zinc-200 tracking-wide">Money Packet</span>
       <Gallery
         galleryID={galleryID}
         breakpoints={{ lg: 1200 }}
