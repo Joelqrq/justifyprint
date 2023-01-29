@@ -6,14 +6,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Landing } from './landing/Landing';
 import { Footer } from './common/Footer';
 import MoneyPacket from './pages/MoneyPacket/MoneyPacket';
-import { BoxCustomization } from './pages/BoxCustomization/BoxCustomization';
+import { CustomBox } from './pages/CustomBox/CustomBox';
+
+const helmetContext = {};
 
 function App() {
   return (
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <div className="App">
         <Helmet>
-          <title>Justify Print: Quality and affordable printing solutions</title>
+          <title>
+            Justify Print: Quality and affordable printing solutions
+          </title>
         </Helmet>
         <BrowserRouter>
           <Navbar></Navbar>
@@ -22,10 +26,7 @@ function App() {
               <Route path="/" element={<Landing />} />
               <Route path="products" element={<Header></Header>} />
               <Route path="moneypacket" element={<MoneyPacket></MoneyPacket>} />
-              <Route
-                path="box-customization"
-                element={<BoxCustomization></BoxCustomization>}
-              />
+              <Route path="custombox" element={<CustomBox></CustomBox>} />
             </Routes>
           </div>
           <Footer></Footer>

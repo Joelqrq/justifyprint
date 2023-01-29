@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { withVisibility } from './withVisibility';
 
 export const Menu = withVisibility((props) => {
@@ -6,89 +7,56 @@ export const Menu = withVisibility((props) => {
     <div
       id="mega-menu-full-dropdown"
       className={
-        'absolute inset-x-0 mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 transition-all duration-300 ease-in-out' +
-        (props.visibility
-          ? ' translate-x-0 opacity-100'
-          : ' opacity-0 -translate-x-full')
+        'mt-3 w-full z-100 backdrop-blur rounded-md border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75 transition-all duration-150 ease-in-out' +
+        (props.visibility ? ' translate-y-0' : ' opacity-0 -translate-y-[5%]')
       }
     >
-      <div className="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
+      <div className="grid py-5 px-4 mx-auto max-w-screen-xl sm:grid-cols-2 md:grid-cols-3 md:px-6">
         <ul aria-labelledby="mega-menu-full-dropdown-button">
           <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Online Stores</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
+            <a
+              href="https://pricelist.justifyprint.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
+            >
+              <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
+                pricelist
+              </p>
+              <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
+                Check out the pricing of other products.
               </span>
-            </button>
-          </li>
-          <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Segmentation</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
-              </span>
-            </button>
-          </li>
-          <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Marketing CRM</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
-              </span>
-            </button>
+            </a>
           </li>
         </ul>
         <ul>
           <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Online Stores</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
+            <NavLink
+              to="moneypacket"
+              className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
+            >
+              <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
+                money packet
+              </p>
+              <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
+                Put your design onto money packet.
               </span>
-            </button>
-          </li>
-          <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Segmentation</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
-              </span>
-            </button>
-          </li>
-          <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Marketing CRM</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
-              </span>
-            </button>
+            </NavLink>
           </li>
         </ul>
         <ul className="hidden md:block">
           <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Audience Management</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
+            <NavLink
+              to="custombox"
+              className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
+            >
+              <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
+                custom box
+              </p>
+              <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
+                Various sizes and material available.
               </span>
-            </button>
-          </li>
-          <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Creative Tools</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
-              </span>
-            </button>
-          </li>
-          <li>
-            <button className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-              <div className="font-semibold">Marketing Automation</div>
-              <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Connect with third-party tools that you're already using.
-              </span>
-            </button>
+            </NavLink>
           </li>
         </ul>
       </div>

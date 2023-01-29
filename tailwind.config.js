@@ -6,6 +6,8 @@ module.exports = {
       fontFamily: {
         // sans: ['Montserrat'],
       },
+      colors: {
+      },
     },
   },
   plugins: [],

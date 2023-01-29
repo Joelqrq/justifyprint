@@ -1,28 +1,29 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Email } from '../icon/Email';
 import { Facebook } from '../icon/Facebook';
 import { Instagram } from '../icon/Instagram';
 import { Whatsapp } from '../icon/Whatsapp';
 import { useToggle } from '../hooks/useToggle';
+import { Menu } from './Menu';
 
 export const Navbar = () => {
   const [openState, setOpenState] = useToggle();
-  // const menuBtnRef = useRef();
+  const menuBtnRef = useRef();
 
   return (
-    <>
-      <nav className="bg-white shadow dark:bg-zinc-800 w-full lg:fixed z-10">
+    <div className="lg:fixed inset-x-0 z-10 mt-3 mx-auto w-full max-w-screen-xl lg:flex lg:flex-col">
+      <nav className="backdrop-blur rounded-md border border-zinc-900/5 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75">
         <div className="container px-6 py-4 mx-auto">
           <div className="lg:flex lg:items-center">
             <div className="flex items-center justify-between">
               <div>
-                <NavLink
-                  to="/"
-                  className="text-2xl font-bold text-zinc-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-zinc-700 dark:hover:text-zinc-300"
-                >
-                  <img className="h-14"
-                    src="https://joelqrq.github.io/justifyprint-pricelist-warehouse/logo/justifyprint.png" alt="homepage" />
+                <NavLink to="/">
+                  <img
+                    className="pt-2 h-14 dark:invert"
+                    src="https://joelqrq.github.io/justifyprint-pricelist-warehouse/logo/justifyprint.png"
+                    alt="homepage"
+                  />
                 </NavLink>
               </div>
 
@@ -73,16 +74,8 @@ export const Navbar = () => {
                   : ' opacity-0 -translate-x-full')
               }
             >
-              <div className="flex flex-col text-zinc-600 dark:text-zinc-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
-                <a
-                  href="https://pricelist.justifyprint.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
-                >
-                  pricelist
-                </a>
-                {/* <button
+              <div className="flex flex-col text-zinc-800 dark:text-zinc-100 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+                <button
                   onClick={() => {
                     setOpenState();
                     menuBtnRef.current.toggle();
@@ -90,19 +83,7 @@ export const Navbar = () => {
                   className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
                 >
                   products
-                </button> */}
-                <NavLink
-                  to="moneypacket"
-                  className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
-                >
-                  money packet
-                </NavLink>
-                <NavLink
-                  to="box-customization"
-                  className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
-                >
-                  box customization
-                </NavLink>
+                </button>
               </div>
               <div className="flex justify-center items-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
                 <Email></Email>
@@ -113,8 +94,8 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
-        {/* <Menu ref={menuBtnRef}></Menu> */}
       </nav>
-    </>
+      <Menu ref={menuBtnRef}></Menu>
+    </div>
   );
 };

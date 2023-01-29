@@ -9,7 +9,7 @@ export const Facebook = () => {
       rel="noopener noreferrer"
     >
       <svg
-        className="h-6 stroke-zinc-600 dark:stroke-white transition-colors duration-300 hover:stroke-zinc-400"
+        className="h-6 stroke-zinc-800 dark:stroke-zinc-100  transition-colors duration-300 hover:stroke-zinc-400"
         strokeWidth={1.5}
         viewBox="0 0 24 24"
         fill="none"

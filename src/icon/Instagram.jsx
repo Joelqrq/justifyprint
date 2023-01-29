@@ -9,7 +9,7 @@ export const Instagram = () => {
       rel="noopener noreferrer"
     >
       <svg
-        className="h-5 fill-zinc-600 dark:fill-white transition-colors duration-300 hover:fill-zinc-400"
+        className="h-5 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 1000"
         fill="none"

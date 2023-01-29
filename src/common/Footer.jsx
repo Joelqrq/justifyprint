@@ -7,16 +7,19 @@ import { Whatsapp } from '../icon/Whatsapp';
 export const Footer = () => {
   return (
     <footer className="bg-white dark:bg-zinc-900">
-      <div className="container px-6 py-8 mx-auto">
+      <div className="max-w-screen-xl px-6 py-8 mx-auto">
         <hr className="my-10 border-zinc-200 dark:border-zinc-700" />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div></div>
+          <div>
+          </div>
           <div>
             <FooterCategory content="product" />
             <FooterLink
-              content="pricelist"
+              content="price list"
               link="https://pricelist.justifyprint.com"
             />
+            <FooterLink content="money packet" link="./moneypacket" />
+            <FooterLink content="custom box" link="./custombox" />
           </div>
 
           {/* <div>
@@ -35,8 +38,8 @@ export const Footer = () => {
                 Justify Print
               </span>
               <span className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300">
-                We bring you the cheapest and most affordable printing
-                solutions in Singapore.
+                We bring you the cheapest and most affordable printing solutions
+                in Singapore.
               </span>
             </div>
             <div>

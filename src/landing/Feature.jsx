@@ -3,8 +3,8 @@ import React from 'react';
 export const Feature = () => {
   return (
     <section className="bg-white dark:bg-zinc-900">
-      <div className="container px-6 py-12 mx-auto">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-screen-xl px-6 py-12 mx-auto">
+        <div className="grid grid-cols-1 gap-y-24 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <div className="h-8">
               <a
@@ -13,7 +13,7 @@ export const Feature = () => {
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="h-7 fill-zinc-600 transition-colors duration-300 hover:fill-zinc-400"
+                  className="h-7 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 30.667 30.667"
                   fill="none"
@@ -23,16 +23,24 @@ export const Feature = () => {
               </a>
             </div>
 
-            <h1 className="mt-4 text-xl font-semibold text-zinc-800 dark:text-white">
+            <h1 className="mt-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
               Contact us
             </h1>
-            <p className="mt-2 text-zinc-700 dark:text-zinc-400">
-              Whatsapp or Call us at +65 9227 5169.
+            <p className="mt-2 text-zinc-700 dark:text-zinc-200">
+              Whatsapp or Call us at{' '}
+              <a
+                href="https://wa.me/6592275169"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:underline hover:text-zinc-400"
+              >
+                +65 9227 5169.
+              </a>
             </p>
-            <p className="mt-2 text-zinc-700 dark:text-zinc-400">
+            <p className="mt-2 text-zinc-700 dark:text-zinc-200">
               Near instant response during working hours.
             </p>
-            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-200">
               *Please be advised that we may not be able to provide quotation
               over the phone call.
             </p>
@@ -46,7 +54,7 @@ export const Feature = () => {
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="h-8 stroke-zinc-600 transition-colors duration-300 hover:stroke-zinc-400"
+                  className="h-8 stroke-zinc-800 dark:stroke-zinc-100 transition-colors duration-300 hover:stroke-zinc-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -59,11 +67,19 @@ export const Feature = () => {
                 </svg>
               </a>
             </div>
-            <h1 className="mt-4 text-xl font-semibold text-zinc-800 dark:text-white">
+            <h1 className="mt-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
               Email us
             </h1>
-            <p className="mt-2 text-zinc-700 dark:text-zinc-400">
-              Send us your design files at justifyprint@gmail.com.
+            <p className="mt-2 text-zinc-700 dark:text-zinc-200">
+              Send us your design files through{' '}
+              <a
+                href="mailto:justifyprint@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:underline hover:text-zinc-400"
+              >
+                justifyprint@gmail.com.
+              </a>
             </p>
           </div>
 
@@ -75,7 +91,7 @@ export const Feature = () => {
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="h-8 stroke-zinc-600 transition-colors duration-300 hover:stroke-zinc-400"
+                  className="h-8 stroke-zinc-800 dark:stroke-zinc-100 transition-colors duration-300 hover:stroke-zinc-400"
                   strokeWidth={1.5}
                   viewBox="0 0 24 24"
                   fill="none"
@@ -96,11 +112,11 @@ export const Feature = () => {
                 </svg>
               </a>
             </div>
-            <h1 className="mt-4 text-xl font-semibold text-zinc-800 dark:text-white">
+            <h1 className="mt-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
               Ask your question
             </h1>
 
-            <p className="mt-2 text-zinc-700 dark:text-zinc-400">
+            <p className="mt-2 text-zinc-700 dark:text-zinc-200">
               Near instant response during working hours.
             </p>
           </div>
