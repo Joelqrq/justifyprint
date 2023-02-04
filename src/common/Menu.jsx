@@ -7,7 +7,7 @@ export const Menu = withVisibility((props) => {
     <div
       id="mega-menu-full-dropdown"
       className={
-        'mt-3 w-full z-100 backdrop-blur rounded-md border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75 transition-all duration-150 ease-in-out' +
+        'hidden lg:block mt-3 w-full z-20 backdrop-blur rounded-md border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75 transition-all duration-150 ease-in-out' +
         (props.visibility ? ' translate-y-0' : ' opacity-0 -translate-y-[5%]')
       }
     >

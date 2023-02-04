@@ -14,7 +14,7 @@ export const CustomBox = () => {
   return (
     <>
       <Title title="Custom Box"></Title>
-      <div className="pt-12 flex flex-col items-center">
+      <div className="lg:pt-12 flex flex-col items-center">
         <div className="p-6 flex flex-col items-center">
           <span className="text-2xl tracking-wide text-zinc-800 dark:text-zinc-200">
           Custom Box

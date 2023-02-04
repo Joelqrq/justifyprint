@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Feature = () => {
   return (
-    <section className="bg-white dark:bg-zinc-900">
+    <section>
       <div className="max-w-screen-xl px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 gap-y-24 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>

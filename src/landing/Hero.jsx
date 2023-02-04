@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero = () => {
   return (
-    <div className="max-w-screen-xl flex flex-col-reverse px-6 pt-6 pb-12 mx-auto lg:h-[32rem] lg:py-16 lg:flex-row bg-white dark:bg-zinc-900">
+    <div className="max-w-screen-xl flex flex-col-reverse px-6 pt-6 pb-12 mx-auto lg:h-[32rem] lg:py-16 lg:flex-row">
       <div className="w-full lg:w-1/2">
         <div className="lg:max-w-lg lg:mt-8">
           <h1 className="text-2xl font-medium text-zinc-800 dark:text-zinc-100 lg:text-4xl">

@@ -6,7 +6,7 @@ import { Whatsapp } from '../icon/Whatsapp';
 
 export const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-zinc-900">
+    <footer className="bg-zinc-50/80 dark:bg-zinc-900">
       <div className="max-w-screen-xl px-6 py-8 mx-auto">
         <hr className="my-10 border-zinc-200 dark:border-zinc-700" />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
