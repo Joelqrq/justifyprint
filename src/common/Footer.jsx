@@ -18,8 +18,8 @@ export const Footer = () => {
               content="price list"
               link="https://pricelist.justifyprint.com"
             />
-            <FooterLink content="money packet" link="moneypacket" />
-            <FooterLink content="custom box" link="custombox" />
+            <FooterLink content="money packet" link="/moneypacket" />
+            <FooterLink content="custom box" link="/custombox" />
           </div>
 
           {/* <div>
