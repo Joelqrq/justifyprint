@@ -7,6 +7,7 @@ import { Landing } from './landing/Landing';
 import { Footer } from './common/Footer';
 import MoneyPacket from './pages/MoneyPacket/MoneyPacket';
 import { CustomBox } from './pages/CustomBox/CustomBox';
+import { ScrollToTop } from './common/ScrollToTop';
 
 const helmetContext = {};
 
@@ -20,6 +21,7 @@ function App() {
           </title>
         </Helmet>
         <BrowserRouter>
+          <ScrollToTop />
           <div className="bg bg-contain bg-repeat">
             <Navbar></Navbar>
             <div className="mx-auto pt-6 lg:pt-24 min-h-[500px] bg-zinc-50/80 dark:bg-zinc-900">

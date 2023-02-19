@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Email } from '../icon/Email';
 import { Facebook } from '../icon/Facebook';
 import { Instagram } from '../icon/Instagram';
@@ -10,16 +11,15 @@ export const Footer = () => {
       <div className="max-w-screen-xl px-6 py-8 mx-auto">
         <hr className="my-10 border-zinc-200 dark:border-zinc-700" />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div>
-          </div>
+          <div></div>
           <div>
             <FooterCategory content="product" />
             <FooterLink
               content="price list"
               link="https://pricelist.justifyprint.com"
             />
-            <FooterLink content="money packet" link="/moneypacket" />
-            <FooterLink content="custom box" link="/custombox" />
+            <FooterNavLink content="money packet" link="/moneypacket" />
+            <FooterNavLink content="custom box" link="/custombox" />
           </div>
 
           {/* <div>
@@ -89,5 +89,16 @@ const FooterLink = ({ content, link }) => {
     >
       {content}
     </a>
+  );
+};
+
+const FooterNavLink = ({ content, link }) => {
+  return (
+    <NavLink
+      to={link}
+      className="block mt-3 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300 hover:text-zinc-400 dark:hover:text-zinc-200 hover:underline capitalize"
+    >
+      {content}
+    </NavLink>
   );
 };

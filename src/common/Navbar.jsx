@@ -76,7 +76,7 @@ export const Navbar = () => {
                     onClick={() => {
                       menuBtnRef.current.toggle();
                     }}
-                    className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-zinc-900 dark:hover:text-zinc-200"
+                    className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-zinc-800 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-200"
                   >
                     products
                   </button>
