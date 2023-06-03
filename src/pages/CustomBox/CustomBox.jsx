@@ -1,5 +1,4 @@
 import React from 'react';
-import { Title } from '@common/Title';
 import mainImage from '@assets/images/box-customization/main.png';
 import boxSizeImage from '@assets/images/box-customization/box-sizes.jpg';
 import boxColorImage from '@assets/images/box-customization/box-colors.jpg';
@@ -13,11 +12,10 @@ import paperGiftBagsImage from '@assets/images/box-customization/paper-gift-bags
 export const CustomBox = () => {
   return (
     <>
-      <Title title="Custom Box"></Title>
-      <div className="lg:pt-12 flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <div className="p-6 flex flex-col items-center">
           <span className="text-2xl tracking-wide text-zinc-800 dark:text-zinc-200">
-          Custom Box
+            Custom Box
           </span>
           <img
             className="saturate-150 rounded-sm mt-6 min-w-[300px] min-h-[150px] md:h-[400px] object-contain object-top"

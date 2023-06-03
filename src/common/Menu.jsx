@@ -12,27 +12,10 @@ export const Menu = withVisibility((props) => {
       }
     >
       <div className="grid py-5 px-4 mx-auto max-w-screen-xl sm:grid-cols-2 md:grid-cols-3 md:px-6">
-        <ul aria-labelledby="mega-menu-full-dropdown-button">
-          <li>
-            <a
-              href="https://pricelist.justifyprint.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
-            >
-              <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
-                pricelist
-              </p>
-              <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
-                Check out the pricing of other products.
-              </span>
-            </a>
-          </li>
-        </ul>
         <ul>
           <li>
             <NavLink
-              to="moneypacket"
+              to="money-packet"
               className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
             >
               <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
@@ -47,7 +30,7 @@ export const Menu = withVisibility((props) => {
         <ul className="hidden md:block">
           <li>
             <NavLink
-              to="custombox"
+              to="custom-box"
               className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
             >
               <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">

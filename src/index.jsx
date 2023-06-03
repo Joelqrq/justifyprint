@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import metadata from './metadata.json';
+import { constructMetaData } from './utils/constructMetaData';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const HelmetContext = {};
+
 root.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider context={HelmetContext}>
+      <Helmet
+        title={metadata.title}
+        meta={constructMetaData(metadata)}
+      ></Helmet>
+      <App />
+    </HelmetProvider>
   </React.StrictMode>
 );
 

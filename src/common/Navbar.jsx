@@ -110,22 +110,6 @@ export const Navbar = () => {
                 <Disclosure.Panel className="flex flex-col items-center p-2">
                   <ul>
                     <li>
-                      <a
-                        onClick={setOpenState}
-                        href="https://pricelist.justifyprint.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
-                      >
-                        <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
-                          pricelist
-                        </p>
-                        <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
-                          Check out the pricing of other products.
-                        </span>
-                      </a>
-                    </li>
-                    <li>
                       <NavLink
                         onClick={setOpenState}
                         to="moneypacket"

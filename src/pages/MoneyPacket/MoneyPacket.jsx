@@ -1,6 +1,5 @@
 import { React } from 'react';
 import { Gallery } from '@common/Gallery';
-import { Title } from '@common/Title';
 import mpmodel from '@assets/images/moneypacket/MPModel.jpg';
 import mp1 from '@assets/images/moneypacket/MP1.jpg';
 import mp2 from '@assets/images/moneypacket/MP2.jpg';
@@ -20,8 +19,7 @@ const galleryID = 'bc-gallery-1';
 const MoneyPacket = () => {
   return (
     <>
-      <Title title="Money Packet"></Title>
-      <div className="container px-6 lg:py-10 mx-auto">
+      <div className="container px-6 mx-auto">
         <span className="block mx-auto mb-4 max-w-fit text-2xl text-zinc-800 dark:text-zinc-200 tracking-wide">
           Money Packet
         </span>

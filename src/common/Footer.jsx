@@ -7,19 +7,15 @@ import { Whatsapp } from '../icon/Whatsapp';
 
 export const Footer = () => {
   return (
-    <footer className="bg-zinc-50/80 dark:bg-zinc-900">
+    <footer>
       <div className="max-w-screen-xl px-6 py-8 mx-auto">
         <hr className="my-10 border-zinc-200 dark:border-zinc-700" />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div></div>
           <div>
             <FooterCategory content="product" />
-            <FooterLink
-              content="price list"
-              link="https://pricelist.justifyprint.com"
-            />
-            <FooterNavLink content="money packet" link="/moneypacket" />
-            <FooterNavLink content="custom box" link="/custombox" />
+            <FooterNavLink content="money packet" link="/money-packet" />
+            <FooterNavLink content="custom box" link="/custom-box" />
           </div>
 
           {/* <div>
@@ -34,32 +30,35 @@ export const Footer = () => {
           <div>
             <FooterCategory content="company" />
             <div>
-              <span className="block mt-3 text-md font-medium text-zinc-500 duration-700 dark:text-zinc-300">
+              <span className="block mt-3 text-md font-medium text-zinc-700 dark:text-zinc-200">
                 Justify Print
               </span>
-              <span className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300">
+              <span className="block mt-1 text-sm font-medium text-zinc-700 dark:text-zinc-200">
                 We bring you the cheapest and most affordable printing solutions
                 in Singapore.
               </span>
             </div>
             <div>
-              <span className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300">
+              <span className="block mt-1 text-sm font-medium text-zinc-700 dark:text-zinc-200">
                 Contact: +65 9227 5169
               </span>
-              <a
-                href="mailto:justifyprint@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-1 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300"
-              >
-                Email: justifyprint@gmail.com
-              </a>
+              <span className="block mt-1 text-sm font-medium text-zinc-700 dark:text-zinc-200">
+                Email:&nbsp;
+                <a
+                  href="mailto:justifyprint@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-zinc-700 dark:text-zinc-200 hover:text-zinc-400"
+                >
+                  justifyprint@gmail.com
+                </a>
+              </span>
             </div>
           </div>
         </div>
         <hr className="mt-10 mb-4 border-zinc-200 dark:border-zinc-700" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-zinc-700 dark:text-zinc-200">
             © {new Date().getFullYear()} Justify Print
           </p>
 
@@ -77,7 +76,9 @@ export const Footer = () => {
 
 const FooterCategory = ({ content }) => {
   return (
-    <div className="text-xs font-medium text-zinc-400 uppercase">{content}</div>
+    <div className="text-xs font-medium text-zinc-800 dark:text-zinc-100 uppercase">
+      {content}
+    </div>
   );
 };
 
@@ -85,7 +86,7 @@ const FooterLink = ({ content, link }) => {
   return (
     <a
       href={link}
-      className="block mt-3 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300 hover:text-zinc-400 dark:hover:text-zinc-200 hover:underline capitalize"
+      className="block mt-3 text-sm font-medium text-zinc-700 duration-150 dark:text-zinc-200 hover:text-zinc-400 capitalize"
     >
       {content}
     </a>
@@ -96,7 +97,7 @@ const FooterNavLink = ({ content, link }) => {
   return (
     <NavLink
       to={link}
-      className="block mt-3 text-sm font-medium text-zinc-500 duration-700 dark:text-zinc-300 hover:text-zinc-400 dark:hover:text-zinc-200 hover:underline capitalize"
+      className="block mt-3 text-sm font-medium text-zinc-700 duration-150 dark:text-zinc-200 hover:text-zinc-400 capitalize"
     >
       {content}
     </NavLink>

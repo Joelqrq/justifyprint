@@ -1,0 +1,31 @@
+{
+  "title": "Justify Print - Quality and affordable printing solutions",
+  "names": [
+    {
+      "description": "Justify Print brings you the quality and affordable printing solutions in Singapore."
+    },
+    {
+      "keywords": "print,printing,singapore,print service,printing service,singapore print service,singapore printing service"
+    }
+  ],
+  "properties": [
+    {
+      "og": {
+        "type": "website",
+        "url": "https: //justifyprint.com/",
+        "title": "Justify Print - Quality and affordable printing solutions",
+        "description": "Justify Print brings you the quality and affordable printing solutions in Singapore.",
+        "image": "https://justifyprint.com/favicon.png"
+      }
+    },
+    {
+      "twitter": {
+        "card": "summary_large_image",
+        "url": "https://justifyprint.com/",
+        "title": "Justify Print - Quality and affordable printing solutions",
+        "description": "Justify Print brings you the quality and affordable printing solutions in Singapore.",
+        "image": "https://justifyprint.com/favicon.png"
+      }
+    }
+  ]
+}
