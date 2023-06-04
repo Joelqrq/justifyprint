@@ -6,7 +6,7 @@ import { Instagram } from '../icon/Instagram';
 import { Whatsapp } from '../icon/Whatsapp';
 import { useToggle } from '../hooks/useToggle';
 import { Menu } from './Menu';
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 
 export const Navbar = () => {
   const [openState, setOpenState] = useToggle();
@@ -73,9 +73,7 @@ export const Navbar = () => {
               <div className="hidden lg:flex flex-1 flex-row items-center justify-between w-auto mt-0 p-0">
                 <div className="hidden lg:flex flex-row items-center px-16 -mx-4">
                   <button
-                    onClick={() => {
-                      menuBtnRef.current.toggle();
-                    }}
+                    onClick={setOpenState}
                     className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-zinc-800 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-200"
                   >
                     products
@@ -92,13 +90,15 @@ export const Navbar = () => {
           </div>
         </nav>
         <div className="absolute inset-x-0 mt-3 px-3 z-20">
-          <div
-            className={
-              'relative flex lg:hidden flex-col px-3 py-4 backdrop-blur rounded-xl border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50 dark:bg-zinc-900/75 transition-all duration-150 ease-in-out' +
-              (openState
-                ? ' translate-y-0 opacity-100'
-                : ' opacity-0 -translate-y-[5%]')
-            }
+          <Transition
+            className="relative flex lg:hidden flex-col px-3 py-4 backdrop-blur rounded-xl border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50 dark:bg-zinc-900/75"
+            show={openState}
+            enter="transition-all duration-150 ease-in-out"
+            enterFrom="-translate-y-[5%] opacity-0"
+            enterTo="translate-y-0 opacity-100"
+            leave="transition-all duration-150 ease-in-out"
+            leaveFrom="translate-y-0 opacity-100"
+            leaveTo="-translate-y-[5%] opacity-0"
           >
             <div className="flex lg:hidden flex-col">
               <Disclosure>
@@ -147,9 +147,9 @@ export const Navbar = () => {
               <Facebook></Facebook>
               <Instagram></Instagram>
             </div>
-          </div>
+          </Transition>
         </div>
-        <Menu ref={menuBtnRef}></Menu>
+        <Menu openState={openState} onToggle={setOpenState}></Menu>
       </div>
     </div>
   );
