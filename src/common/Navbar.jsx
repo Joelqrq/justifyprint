@@ -13,8 +13,8 @@ export const Navbar = () => {
   const menuBtnRef = useRef();
 
   return (
-    <div className="bg-zinc-50/80">
-      <div className="lg:fixed inset-x-0 z-10 mt-3 mx-auto px-3 w-full max-w-screen-xl lg:flex lg:flex-col">
+    <div>
+      <div className="lg:fixed inset-x-0 z-10 mx-auto px-3 pt-3 w-full max-w-screen-xl lg:flex lg:flex-col">
         <nav className="backdrop-blur rounded-xl lg:rounded-md border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75">
           <div className="container px-6 py-4 mx-auto">
             <div className="lg:flex lg:items-center">
