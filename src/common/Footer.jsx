@@ -1,11 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Email } from '../icon/Email';
-import { Facebook } from '../icon/Facebook';
-import { Instagram } from '../icon/Instagram';
-import { Whatsapp } from '../icon/Whatsapp';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Email } from "../icon/Email";
+import { Facebook } from "../icon/Facebook";
+import { Instagram } from "../icon/Instagram";
+import { Whatsapp } from "../icon/Whatsapp";
+import { products } from "../configs/products";
 
 export const Footer = () => {
+  const footerLinks = products.map((product) => (
+    <FooterNavLink
+      key={`footer${product.title}`}
+      content={product.title}
+      link={product.path}
+    />
+  ));
+
   return (
     <footer>
       <div className="max-w-screen-xl px-6 py-8 mx-auto">
@@ -14,8 +23,7 @@ export const Footer = () => {
           <div></div>
           <div>
             <FooterCategory content="product" />
-            <FooterNavLink content="money packet" link="/money-packet" />
-            <FooterNavLink content="custom box" link="/custom-box" />
+            {footerLinks}
           </div>
 
           {/* <div>

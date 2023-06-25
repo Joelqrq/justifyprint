@@ -1,20 +1,31 @@
-import { React, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Email } from '../icon/Email';
-import { Facebook } from '../icon/Facebook';
-import { Instagram } from '../icon/Instagram';
-import { Whatsapp } from '../icon/Whatsapp';
-import { useToggle } from '../hooks/useToggle';
-import { Menu } from './Menu';
-import { Disclosure, Transition } from '@headlessui/react';
+import { React, useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { Email } from "../icon/Email";
+import { Facebook } from "../icon/Facebook";
+import { Instagram } from "../icon/Instagram";
+import { Whatsapp } from "../icon/Whatsapp";
+import { useToggle } from "../hooks/useToggle";
+import { Menu } from "./Menu";
+import { Disclosure, Transition } from "@headlessui/react";
+import { Link } from "../components/Link";
+import { products } from "../configs/products";
 
 export const Navbar = () => {
   const [openState, setOpenState] = useToggle();
   const menuBtnRef = useRef();
+  const productLinks = products.map((product) => (
+    <li key={`mnav-${product.title}`}>
+      <Link
+        to={product.path.substring(1)}
+        title={product.title}
+        handleClick={setOpenState}
+      />
+    </li>
+  ));
 
   return (
     <div>
-      <div className="lg:fixed inset-x-0 z-10 mx-auto px-3 pt-3 w-full max-w-screen-xl lg:flex lg:flex-col">
+      <div className="lg:fixed inset-x-0 z-[100] mx-auto px-3 lg:px-0 pt-3 w-full max-w-screen-xl lg:flex lg:flex-col">
         <nav className="backdrop-blur rounded-xl lg:rounded-md border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75">
           <div className="container px-6 py-4 mx-auto">
             <div className="lg:flex lg:items-center">
@@ -39,7 +50,7 @@ export const Navbar = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className={'w-6 h-6' + (openState ? ' hidden' : ' block')}
+                      className={"w-6 h-6" + (openState ? " hidden" : " block")}
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
@@ -54,7 +65,7 @@ export const Navbar = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className={
-                        'w-6 h-6' + (!openState ? ' hidden' : ' block')
+                        "w-6 h-6" + (!openState ? " hidden" : " block")
                       }
                       fill="none"
                       viewBox="0 0 24 24"
@@ -74,7 +85,7 @@ export const Navbar = () => {
                 <div className="hidden lg:flex flex-row items-center px-16 -mx-4">
                   <button
                     onClick={setOpenState}
-                    className="capitalize mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-zinc-800 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-200"
+                    className="capitalize mt-2 font-medium transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-zinc-800 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-200"
                   >
                     products
                   </button>
@@ -89,7 +100,7 @@ export const Navbar = () => {
             </div>
           </div>
         </nav>
-        <div className="absolute inset-x-0 mt-3 px-3 z-20">
+        <div className="absolute inset-x-0 mt-3 px-3 z-[200]">
           <Transition
             className="relative flex lg:hidden flex-col px-3 py-4 backdrop-blur rounded-xl border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50 dark:bg-zinc-900/75"
             show={openState}
@@ -103,40 +114,13 @@ export const Navbar = () => {
             <div className="flex lg:hidden flex-col">
               <Disclosure>
                 <Disclosure.Button className="block p-2 border-b hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]">
-                  <span className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
+                  <span className="capitalize text-zinc-800 dark:text-zinc-100 font-medium">
                     products
                   </span>
                 </Disclosure.Button>
                 <Disclosure.Panel className="flex flex-col items-center p-2">
                   <ul>
-                    <li>
-                      <NavLink
-                        onClick={setOpenState}
-                        to="money-packet"
-                        className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
-                      >
-                        <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
-                          money packet
-                        </p>
-                        <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
-                          Put your design onto money packet.
-                        </span>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        onClick={setOpenState}
-                        to="custom-box"
-                        className="block p-3 rounded-lg border border-transparent hover:border-zinc-900/10 dark:hover:border-zinc-100/10 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/20 text-center transition-colors duration-[50ms]"
-                      >
-                        <p className="capitalize text-zinc-800 dark:text-zinc-100 font-semibold">
-                          custom box
-                        </p>
-                        <span className="text-sm font-light text-zinc-700 dark:text-zinc-200">
-                          Various sizes and material available.
-                        </span>
-                      </NavLink>
-                    </li>
+                    {productLinks}
                   </ul>
                 </Disclosure.Panel>
               </Disclosure>

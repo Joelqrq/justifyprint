@@ -9,7 +9,7 @@ export const ClientTestimony = () => {
   return (
     <div>
       <div className="max-w-screen-xl flex flex-col px-6 dark:px-16 dark:lg:px-6 py-12 mx-auto items-center">
-        <span className="block mb-6 text-2xl font-medium text-zinc-800 dark:text-zinc-100">
+        <span className="block mb-6 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
           Our Clients
         </span>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 auto-cols-min gap-x-4 gap-y-1 dark:gap-y-4 place-items-center">

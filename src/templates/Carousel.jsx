@@ -1,39 +1,91 @@
-import React, { useEffect, useRef } from 'react';
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from "react";
+import { ArrowRight } from "../icon/ArrowRight";
+import { ArrowLeft } from "../icon/ArrowLeft";
 
-export const Carousel = ({ folder }) => {
+export const Carousel = forwardRef(({ imageUrls }, ref) => {
   const swiperElRef = useRef(null);
+  const thumbsElRef = useRef(null);
+
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        setTo(index) {
+          swiperElRef.current.swiper.slideTo(index, 150, false);
+        },
+      };
+    },
+    []
+  );
 
   useEffect(() => {
-    // listen for Swiper events using addEventListener
-    swiperElRef.current.addEventListener('progress', (e) => {
-      const [swiper, progress] = e.detail;
-      console.log(progress);
-    });
+    const thumbs = thumbsElRef.current;
+    const thumbsConfig = {
+      slidesPerView: 4,
+      spaceBetween: 4,
+    };
 
-    swiperElRef.current.addEventListener('slidechange', (e) => {
-      console.log('slide changed');
-    });
+    Object.assign(thumbs, thumbsConfig);
+    thumbs.initialize();
+    const swiper = swiperElRef.current;
+    const swiperConfig = {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".nextArrow > button",
+        prevEl: ".prevArrow > button",
+      },
+      thumbs: {
+        swiper: thumbsElRef.current,
+      },
+    };
 
-    // get images from folder
-    folder
+    Object.assign(swiper, swiperConfig);
+    swiper.initialize();
   }, []);
 
+  const imageDivs = imageUrls.map((imageUrl) => {
+    return (
+      <swiper-slide class="h-[576px] bg-zinc-900/10" key={`carousel-${imageUrl.title}`}>
+        <img className="object-contain" src={imageUrl.image} />
+      </swiper-slide>
+    );
+  });
+
+  const thumbsDivs = imageUrls.map((imageUrl) => {
+    return (
+      <swiper-slide class="group bg-transparent cursor-pointer" key={`thumbs-${imageUrl.title}`}>
+        <div className="aspect-square m-auto opacity-40 group-[.swiper-slide-thumb-active]:opacity-100 bg-zinc-900/5 after:relative after:block after:w-full after:h-[0.375rem] after:-bottom-[0.1875rem] after:bg-transparent group-[.swiper-slide-thumb-active]:after:bg-zinc-900 after:transition-colors after:duration-150">
+          <div className="min-h-[68px] min-w-[68px] h-full w-full">
+            <img className="object-contain" src={imageUrl.image} />
+          </div>
+        </div>
+      </swiper-slide>
+    );
+  });
+
   return (
-    <swiper-container
-      ref={swiperElRef}
-      slides-per-view="1"
-      navigation="true"
-      pagination="true"
-    >
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <swiper-slide>Slide 6</swiper-slide>
-      <swiper-slide>Slide 7</swiper-slide>
-      <swiper-slide>Slide 8</swiper-slide>
-      <swiper-slide>Slide 9</swiper-slide>
-    </swiper-container>
+    <>
+      <div className="relative">
+        <swiper-container ref={swiperElRef} init="false">
+          {imageDivs}
+        </swiper-container>
+        <div className="prevArrow absolute z-10 top-1/2 left-[4%] -translate-y-1/2 h-10 w-10">
+          <ArrowLeft />
+        </div>
+        <div className="nextArrow absolute z-10 top-1/2 right-[4%] -translate-y-1/2 h-10 w-10">
+          <ArrowRight />
+        </div>
+      </div>
+      <div className="hidden md:block">
+        <swiper-container class="flex pt-2" ref={thumbsElRef} init="false">
+          {thumbsDivs}
+        </swiper-container>
+      </div>
+    </>
   );
-};
+});
