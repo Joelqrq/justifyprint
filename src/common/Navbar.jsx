@@ -27,14 +27,14 @@ export const Navbar = () => {
     <div>
       <div className="lg:fixed inset-x-0 z-[100] mx-auto px-3 lg:px-0 pt-3 w-full max-w-screen-xl lg:flex lg:flex-col">
         <nav className="backdrop-blur rounded-xl lg:rounded-md border border-zinc-900/10 dark:border-zinc-50/[0.06] bg-zinc-50/90 dark:bg-zinc-900/75">
-          <div className="container px-6 py-4 mx-auto">
+          <div className="container px-4 lg:px-6 py-3 lg:py-4 mx-auto">
             <div className="lg:flex lg:items-center">
               <div className="flex items-center justify-between">
                 <div>
                   <NavLink to="/">
                     <img
-                      className="pt-2 h-14 dark:invert"
-                      src="https://joelqrq.github.io/justifyprint-pricelist-warehouse/logo/justifyprint.png"
+                      className="pt-[0.15rem] h-full max-h-8 lg:max-h-10 dark:invert"
+                      src="/logo.png"
                       alt="homepage"
                     />
                   </NavLink>
@@ -119,7 +119,7 @@ export const Navbar = () => {
                   </span>
                 </Disclosure.Button>
                 <Disclosure.Panel className="flex flex-col items-center p-2">
-                  <ul>
+                  <ul className="w-full">
                     {productLinks}
                   </ul>
                 </Disclosure.Panel>

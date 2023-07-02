@@ -14,6 +14,27 @@ root.render(
   <React.StrictMode>
     <HelmetProvider context={HelmetContext}>
       <Helmet title={metadata.title} meta={constructMetaData(metadata)}>
+        <meta
+          name="description"
+          content="Justify Print brings you the quality and affordable printing solutions in Singapore."
+        />
+        <meta
+          property="og:url"
+          content="https://justifyprint.com"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Justify Print - Quality and affordable printing solutions"
+        />
+        <meta
+          property="og:description"
+          content="Justify Print brings you the quality and affordable printing solutions in Singapore."
+        />
+        <meta
+          property="og:image"
+          content="https://justifyprint.com/logo.png"
+        />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Helmet>
       <App />
