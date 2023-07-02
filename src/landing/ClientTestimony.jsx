@@ -1,9 +1,4 @@
 import React from 'react';
-import bnc from '@assets/images/clients/bnc.webp';
-import oishi from '@assets/images/clients/oishi.svg';
-import renci from '@assets/images/clients/renci.png'
-import ntu from '@assets/images/clients/ntu.webp';
-import nus from '@assets/images/clients/nus.png';
 
 export const ClientTestimony = () => {
   return (
