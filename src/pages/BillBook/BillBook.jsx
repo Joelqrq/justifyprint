@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Carousel } from "../../templates/Carousel";
 import { CarouselSelector } from "../../components/CarouselSelector";
-import { finishings } from '../../configs/finishings';
+import { finishings } from "../../configs/finishings";
 
 const imagePathPrefix = "/images/bill-book/";
 const imageUrls = [
@@ -23,6 +23,13 @@ const imageUrls = [
   { title: "Numbering", image: "images/finishings/numbering.jpg" },
   { title: "Custom Die Cut", image: "images/finishings/custom-die-cut.jpg" },
 ];
+
+const productInfo = {
+  title: "Bill Book",
+  description: `Even if the world is hurtling towards a future of technological
+  advancement, the bill book still holds a place in the hearts of
+  traditionalists who prefer a classic, slower-paced approach.`,
+};
 
 const descriptionList = {
   title: "Customize product to all your needs.",
@@ -89,12 +96,10 @@ export const BillBook = () => {
           <div className="my-5 lg:my-9">
             <div className="mb-9">
               <h1 className="mb-3 text-3xl text-zinc-800 dark:text-zinc-100 font-semibold">
-                Bill Book
+                {productInfo.title}
               </h1>
               <p className="text-zinc-700 dark:text-zinc-200">
-                Even if the world is hurtling towards a future of technological
-                advancement, the bill book still holds a place in the hearts of
-                traditionalists who prefer a classic, slower-paced approach.
+                {productInfo.description}
               </p>
             </div>
             {descriptionEls()}

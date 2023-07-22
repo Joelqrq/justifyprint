@@ -23,6 +23,13 @@ const imageUrls = [
   { title: "Custom Die Cut", image: "images/finishings/custom-die-cut.jpg" },
 ];
 
+const productInfo = {
+  title: "Business Card",
+  description: `Your name, your business, and every detail you need on high
+  quality card stock. Even if it is the most basic business tool,
+  there's a reason they're still around after 500 years.`,
+};
+
 const descriptionList = {
   title: "Customize product to all your needs.",
   list: [
@@ -89,12 +96,10 @@ export const BusinessCard = () => {
           <div className="my-5 lg:my-9">
             <div className="mb-9">
               <h1 className="mb-3 text-3xl text-zinc-800 dark:text-zinc-100 font-semibold">
-                Business Card
+                {productInfo.title}
               </h1>
               <p className="text-zinc-700 dark:text-zinc-200">
-                Your name, your business, and every detail you need on high
-                quality card stock. Even if it is the most basic business tool,
-                there's a reason they're still around after 500 years.
+                {productInfo.description}
               </p>
             </div>
             {descriptionEls()}

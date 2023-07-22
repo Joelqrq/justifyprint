@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Carousel } from "../../templates/Carousel";
 import { CarouselSelector } from "../../components/CarouselSelector";
-import { finishings } from '../../configs/finishings';
+import { finishings } from "../../configs/finishings";
 
 const imagePathPrefix = "/images/scratch-card/";
 const imageUrls = [
@@ -25,6 +25,11 @@ const imageUrls = [
   { title: "Numbering", image: "images/finishings/numbering.jpg" },
   { title: "Custom Die Cut", image: "images/finishings/custom-die-cut.jpg" },
 ];
+
+const productInfo = {
+  title: "Scratch Card",
+  description: ``,
+};
 
 const descriptionList = {
   title: "Customize product to all your needs.",
@@ -65,7 +70,7 @@ export const ScratchCard = () => {
       description={finishing.description}
       imageUrl={finishing.imageUrl}
       carousel={carouselRef}
-      index={imageUrls.findIndex(i => i.title == finishing.title)}
+      index={imageUrls.findIndex((i) => i.title == finishing.title)}
     />
   ));
 
@@ -74,7 +79,7 @@ export const ScratchCard = () => {
       {/* Breadcrumb with product name and description */}
       <div className="flex flex-col md:flex-row">
         <div className="min-w-[320px] w-full md:w-5/12 lg:w-1/2 max-w-[576px]">
-        <div className="lg:sticky lg:top-[8rem]">
+          <div className="lg:sticky lg:top-[8rem]">
             <Carousel ref={carouselRef} imageUrls={imageUrls} />
             <div className="hidden mt-8 lg:block">
               <p className="font-semibold">Important Notes:</p>
@@ -91,9 +96,11 @@ export const ScratchCard = () => {
           <div className="my-5 lg:my-9">
             <div className="mb-9">
               <h1 className="mb-3 text-3xl text-zinc-800 dark:text-zinc-100 font-semibold">
-                Scratch Card
+                {productInfo.title}
               </h1>
-              <p className="text-zinc-700 dark:text-zinc-200">Placeholder</p>
+              <p className="text-zinc-700 dark:text-zinc-200">
+                {productInfo.description}
+              </p>
             </div>
             {descriptionEls()}
           </div>

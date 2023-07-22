@@ -24,6 +24,11 @@ const imageUrls = [
   { title: "Custom Die Cut", image: "images/finishings/custom-die-cut.jpg" },
 ];
 
+const productInfo = {
+  title: "Booklet",
+  description: `Feature pages upon pages of everything and anything you wanted. Now you can publish a book that is 100% you, from front to back.`,
+};
+
 const descriptionList = {
   title: "Customize product to all your needs.",
   list: [
@@ -89,10 +94,10 @@ export const Booklet = () => {
           <div className="my-5 lg:my-9">
             <div className="mb-9">
               <h1 className="mb-3 text-3xl text-zinc-800 dark:text-zinc-100 font-semibold">
-                Booklet
+                {productInfo.title}
               </h1>
               <p className="text-zinc-700 dark:text-zinc-200">
-              Feature pages upon pages of everything and anything you wanted. Now you can publish a book that is 100% you, from front to back.
+              {productInfo.description}
               </p>
             </div>
             {descriptionEls()}

@@ -24,6 +24,11 @@ const imageUrls = [
   { title: "Custom Die Cut", image: "images/finishings/custom-die-cut.jpg" },
 ];
 
+const productInfo = {
+  title: "Bookmark",
+  description: `Bookmarks are a staple in any book lover's life, which means they aren't going anywhere anytime soon. Make your mark with a custom bookmark showcasing anything you want.`,
+};
+
 const descriptionList = {
   title: "Customize product to all your needs.",
   list: [
@@ -89,10 +94,10 @@ export const Bookmark = () => {
           <div className="my-5 lg:my-9">
             <div className="mb-9">
               <h1 className="mb-3 text-3xl text-zinc-800 dark:text-zinc-100 font-semibold">
-              Bookmark
+              {productInfo.title}
               </h1>
               <p className="text-zinc-700 dark:text-zinc-200">
-              Bookmarks are a staple in any book lover's life, which means they aren't going anywhere anytime soon. Make your mark with a custom bookmark showcasing anything you want.
+              {productInfo.description}
               </p>
             </div>
             {descriptionEls()}

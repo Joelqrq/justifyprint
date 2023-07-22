@@ -26,6 +26,14 @@ const imageUrls = [
   { title: "Custom Die Cut", image: "images/finishings/custom-die-cut.jpg" },
 ];
 
+const productInfo = {
+  title: "Arch File",
+  description: `You know your paperwork needs a place of their own, why not make
+                it custom to show how special you are? An essential in
+                organizing, these are always present in any office, school, or
+                business.`
+};
+
 const descriptionList = {
   title: "Customize product to all your needs.",
   list: [
@@ -91,13 +99,10 @@ export const ArchFile = () => {
           <div className="my-5 lg:my-9">
             <div className="mb-9">
               <h1 className="mb-3 text-3xl text-zinc-800 dark:text-zinc-100 font-semibold">
-                Arch File
+                {productInfo.title}
               </h1>
               <p className="text-zinc-700 dark:text-zinc-200">
-                You know your paperwork needs a place of their own, why not make
-                it custom to show how special you are? An essential in
-                organizing, these are always present in any office, school, or
-                business.
+                {productInfo.description}
               </p>
             </div>
             {descriptionEls()}
