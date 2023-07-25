@@ -3,23 +3,15 @@ import { Carousel } from "../../templates/Carousel";
 import { CarouselSelector } from "../../components/CarouselSelector";
 import { finishings } from '../../configs/finishings';
 
-const imagePathPrefix = "/images/money-packet/";
+const imagePathPrefix = "/images/label-sticker/";
 const imageUrls = [
-  { title: "", image: `${imagePathPrefix}money-packet.png` },
-  { title: "", image: `${imagePathPrefix}money-packet-1.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-2.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-3.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-4.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-5.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-6.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-7.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-8.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-9.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-10.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-11.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-12.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-13.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-specification.jpg` },
+  { title: "", image: `${imagePathPrefix}label-sticker.png` },
+  { title: "", image: `${imagePathPrefix}label-sticker-1.png` },
+  { title: "", image: `${imagePathPrefix}label-sticker-bottle.webp` },
+  { title: "", image: `${imagePathPrefix}label-sticker-perfume.png` },
+  { title: "", image: `${imagePathPrefix}label-sticker-bottle-1.webp` },
+  { title: "", image: `${imagePathPrefix}label-sticker-container.webp` },
+  { title: "", image: `${imagePathPrefix}label-sticker-paper.png` },
   { title: "Matte", image: "images/finishings/business-cards-matte.jpg" },
   { title: "Gloss", image: "images/finishings/business-cards-gloss.jpg" },
   { title: "Soft Touch", image: "images/finishings/soft-touch.jpg" },
@@ -39,20 +31,20 @@ const imageUrls = [
 ];
 
 const productInfo = {
-  title: "Money Packet",
-  description: `Whether you're looking for bespoke money packets to give out during festive periods, or a brand looking to take advantage of seasonal marketing opportunities, money packets are an essential.`,
+  title: "Label Sticker",
+  description: `Labels or some call it stickers are an essential branding and marketing tool. Savvy marketers know that custom label printing is an easy way to make your product stand out on crowded shelves and are a smart way to brand your company, packaging or service.`,
 };
 
 const descriptionList = {
   title: "Customize product to all your needs.",
   list: [
-    `Festive marketing`,
-    "Beautiful weddings",
-    "Making children happy",
+    `Bottle labelling`,
+    "Container labelling",
+    "Package labelling",
   ],
 };
 
-export const MoneyPacket = () => {
+export const LabelSticker = () => {
   const carouselRef = useRef(null);
 
   const descriptionEls = () => {

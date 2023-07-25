@@ -48,17 +48,17 @@ export const Carousel = forwardRef(({ imageUrls }, ref) => {
     swiper.initialize();
   }, []);
 
-  const imageDivs = imageUrls.map((imageUrl) => {
+  const imageDivs = imageUrls.map((imageUrl, index) => {
     return (
-      <swiper-slide class="h-[576px] bg-zinc-900/10" key={`carousel-${imageUrl.title}`}>
+      <swiper-slide class="h-[576px] bg-zinc-900/10" key={`carousel-${imageUrl.title === "" ? index : imageUrl.title}`}>
         <img className="object-contain" src={imageUrl.image} />
       </swiper-slide>
     );
   });
 
-  const thumbsDivs = imageUrls.map((imageUrl) => {
+  const thumbsDivs = imageUrls.map((imageUrl, index) => {
     return (
-      <swiper-slide class="group bg-transparent cursor-pointer" key={`thumbs-${imageUrl.title}`}>
+      <swiper-slide class="group bg-transparent cursor-pointer" key={`thumbs-${imageUrl.title === "" ? index : imageUrl.title}`}>
         <div className="aspect-square m-auto opacity-40 group-[.swiper-slide-thumb-active]:opacity-100 bg-zinc-900/5 after:relative after:block after:w-full after:h-[0.375rem] after:-bottom-[0.1875rem] after:bg-transparent group-[.swiper-slide-thumb-active]:after:bg-zinc-900 after:transition-colors after:duration-150">
           <div className="min-h-[68px] min-w-[68px] h-full w-full">
             <img className="object-contain" src={imageUrl.image} />

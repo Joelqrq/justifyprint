@@ -3,23 +3,9 @@ import { Carousel } from "../../templates/Carousel";
 import { CarouselSelector } from "../../components/CarouselSelector";
 import { finishings } from '../../configs/finishings';
 
-const imagePathPrefix = "/images/money-packet/";
+const imagePathPrefix = "/images/hand-fan/";
 const imageUrls = [
-  { title: "", image: `${imagePathPrefix}money-packet.png` },
-  { title: "", image: `${imagePathPrefix}money-packet-1.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-2.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-3.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-4.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-5.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-6.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-7.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-8.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-9.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-10.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-11.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-12.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-13.jpg` },
-  { title: "", image: `${imagePathPrefix}money-packet-specification.jpg` },
+  { title: "", image: `${imagePathPrefix}hand-fan.png` },
   { title: "Matte", image: "images/finishings/business-cards-matte.jpg" },
   { title: "Gloss", image: "images/finishings/business-cards-gloss.jpg" },
   { title: "Soft Touch", image: "images/finishings/soft-touch.jpg" },
@@ -39,20 +25,20 @@ const imageUrls = [
 ];
 
 const productInfo = {
-  title: "Money Packet",
-  description: `Whether you're looking for bespoke money packets to give out during festive periods, or a brand looking to take advantage of seasonal marketing opportunities, money packets are an essential.`,
+  title: "Hand Fan",
+  description: `Hand fans are one thing you can use to keep yourself cool, while keeping your brand hot. This genius marketing accessory is a great way for people to show the world what they love.`,
 };
 
 const descriptionList = {
   title: "Customize product to all your needs.",
   list: [
-    `Festive marketing`,
-    "Beautiful weddings",
-    "Making children happy",
+    `K-Pop fanclubs`,
+    "Outdoor festivals",
+    "BBQ franchises",
   ],
 };
 
-export const MoneyPacket = () => {
+export const HandFan = () => {
   const carouselRef = useRef(null);
 
   const descriptionEls = () => {
