@@ -42,11 +42,9 @@ export const Footer = () => {
             </div>
           </div>
           <div className="flex-grow">
+            <FooterCategory content="product" />
             <div className="grid gap-x-20 sm:grid-cols-2 lg:grid-cols-3">
-              <div>
-                <FooterCategory content="product" />
-                {footerLinks}
-              </div>
+              {footerLinks}
             </div>
             <div className="mt-14 sm:flex sm:items-center sm:justify-between">
               <p className="text-sm text-zinc-700 dark:text-zinc-200">

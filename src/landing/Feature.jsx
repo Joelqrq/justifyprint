@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Feature = () => {
   return (
@@ -11,6 +11,7 @@ export const Feature = () => {
                 href="https://wa.me/6592275169"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="justifyprint whatsapp"
               >
                 <svg
                   className="h-7 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"
@@ -27,12 +28,13 @@ export const Feature = () => {
               Contact us
             </h1>
             <p className="mt-2 text-zinc-700 dark:text-zinc-200">
-              Whatsapp or Call us at{' '}
+              Whatsapp or Call us at{" "}
               <a
                 href="https://wa.me/6592275169"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:underline hover:text-zinc-400"
+                title="justifyprint whatsapp"
+                className="transition-colors hover:text-zinc-400"
               >
                 +65 9227 5169.
               </a>
@@ -52,6 +54,7 @@ export const Feature = () => {
                 href="mailto:justifyprint@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="justifyprint email"
               >
                 <svg
                   className="h-8 stroke-zinc-800 dark:stroke-zinc-100 transition-colors duration-300 hover:stroke-zinc-400"
@@ -71,12 +74,13 @@ export const Feature = () => {
               Email us
             </h1>
             <p className="mt-2 text-zinc-700 dark:text-zinc-200">
-              Send us your design files through{' '}
+              Send us your design files through{" "}
               <a
                 href="mailto:justifyprint@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:underline hover:text-zinc-400"
+                title="justifyprint email"
+                className="transition-colors hover:text-zinc-400"
               >
                 justifyprint@gmail.com.
               </a>
@@ -89,6 +93,7 @@ export const Feature = () => {
                 href="https://www.facebook.com/justifyprintdesign"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="justifyprint facebook"
               >
                 <svg
                   className="h-8 stroke-zinc-800 dark:stroke-zinc-100 transition-colors duration-300 hover:stroke-zinc-400"

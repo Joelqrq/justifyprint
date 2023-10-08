@@ -5,6 +5,8 @@ import { finishings } from '../../configs/finishings';
 
 const imagePathPrefix = "/images/desk-calendar/";
 const imageUrls = [
+  { title: "", image: `${imagePathPrefix}desk-calendar-print-on-stand-mockup.png` },
+  { title: "", image: `${imagePathPrefix}desk-calendar-with-hotstamp-mockup.png` },
   { title: "", image: `${imagePathPrefix}desk-calendar.png` },
   { title: "", image: `${imagePathPrefix}desk-calendar-1.png` },
   { title: "", image: `${imagePathPrefix}desk-calendar-2.png` },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Whatsapp = () => {
   return (
@@ -7,6 +7,7 @@ export const Whatsapp = () => {
       href="https://wa.me/6592275169"
       target="_blank"
       rel="noopener noreferrer"
+      title="justifyprint whatsapp"
     >
       <svg
         className="h-5 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Email = () => {
   return (
@@ -7,6 +7,7 @@ export const Email = () => {
       href="mailto:justifyprint@gmail.com"
       target="_blank"
       rel="noopener noreferrer"
+      title="justifyprint email"
     >
       <svg
         className="h-6 stroke-zinc-800 dark:stroke-zinc-100 transition-colors duration-300 hover:stroke-zinc-400"

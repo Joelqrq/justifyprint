@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Instagram = () => {
   return (
@@ -7,6 +7,7 @@ export const Instagram = () => {
       href="https://www.instagram.com/justifyprint"
       target="_blank"
       rel="noopener noreferrer"
+      title="justifyprint instagram"
     >
       <svg
         className="h-5 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"
