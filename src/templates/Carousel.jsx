@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import { ArrowRight } from "../icon/ArrowRight";
 import { ArrowLeft } from "../icon/ArrowLeft";
+import ReactPlayer from "react-player";
 
 export const Carousel = forwardRef(
   ({ imageUrls, showThumbnails = true }, ref) => {
@@ -52,6 +53,17 @@ export const Carousel = forwardRef(
     }, []);
 
     const imageDivs = imageUrls.map((imageUrl, index) => {
+      // handle image and video element based on imageUrl
+      if (imageUrl.type == "video")
+        return (
+          <swiper-slide
+            class="h-[576px] bg-zinc-900/10"
+            key={`carousel-${imageUrl.title === "" ? index : imageUrl.title}`}
+          >
+            <ReactPlayer className="h-100" url={imageUrl.video} loop config={{ youtube: { playerVars: { autoplay: 1, loop: 1, controls: 0, playsinline: 1 } } }} />
+          </swiper-slide>
+        );
+
       return (
         <swiper-slide
           class="h-[576px] bg-zinc-900/10"
