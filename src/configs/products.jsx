@@ -37,6 +37,7 @@ import { PaperBag } from "../pages/PaperBag/PaperBag";
 import { StandingPouch } from "../pages/StandingPouch/StandingPouch";
 import { Lanyard } from "../pages/Lanyard/Lanyard";
 import { Letterhead } from "../pages/Letterhead/Letterhead";
+import { NewspaperPrint } from "../pages/NewspaperPrint/NewspaperPrint";
 
 export const products = [
   {
@@ -221,6 +222,11 @@ export const products = [
     path: "/letterhead",
     title: "letterhead",
     element: <Letterhead />,
+  },
+  {
+    path: "/newspaper-print",
+    title: "newspaper print",
+    element: <NewspaperPrint />,
   },
 ].sort((a, b) => {
   if (a.title < b.title) {
