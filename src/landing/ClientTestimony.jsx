@@ -4,8 +4,8 @@ export const ClientTestimony = () => {
   
   return (
     <div>
-      <div className="max-w-screen-xl flex flex-col px-6 py-12 mx-auto items-center">
-        <span className="block mb-6 text-xl font-semibold text-zinc-800 dark:text-zinc-100 text-center md:text-start">
+      <div className="max-w-screen-xl flex flex-col px-6 py-20 mx-auto items-center">
+        <span className="block mb-10 text-xl font-semibold text-zinc-800 dark:text-zinc-100 text-center md:text-start">
           Companies and individuals with whom we have collaborated
         </span>
         <div className="group w-screen flex overflow-hidden gap-x-6 select-none [mask-image:linear-gradient(to_right,hsla(0,0%,0%,0),hsla(0,0%,0%,1)_20%,hsla(0,0%,0%,1)_80%,hsla(0,0%,0%,0))]">

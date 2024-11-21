@@ -25,8 +25,8 @@ export const Landing = () => {
         <Carousel imageUrls={imageUrls} showThumbnails={false} />
       </div> */}
       <Hero />
-      <Feature />
       <ClientTestimony />
+      <Feature />
     </>
   );
 };
