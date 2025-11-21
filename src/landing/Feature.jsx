@@ -8,10 +8,10 @@ export const Feature = () => {
           <div>
             <div className="h-8">
               <a
-                href="https://wa.me/6592275169"
+                href="https://wa.me/6580808968"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="justifyprint whatsapp"
+                title="JustifyPrint WhatsApp"
               >
                 <svg
                   className="h-7 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"
@@ -30,13 +30,13 @@ export const Feature = () => {
             <p className="mt-2 text-zinc-700 dark:text-zinc-200">
               Whatsapp or Call us at{" "}
               <a
-                href="https://wa.me/6592275169"
+                href="https://wa.me/6580808968"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="justifyprint whatsapp"
+                title="JustifyPrint WhatsApp"
                 className="transition-colors hover:text-zinc-400"
               >
-                +65 9227 5169.
+                +65 8080 8968.
               </a>
             </p>
             <p className="mt-2 text-zinc-700 dark:text-zinc-200">
