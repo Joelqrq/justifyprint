@@ -4,10 +4,10 @@ export const Whatsapp = () => {
   return (
     <a
       className="mx-2"
-      href="https://wa.me/6592275169"
+      href="https://wa.me/6580808968"
       target="_blank"
       rel="noopener noreferrer"
-      title="justifyprint whatsapp"
+      title="JustifyPrint WhatsApp"
     >
       <svg
         className="h-5 fill-zinc-800 dark:fill-zinc-100 transition-colors duration-300 hover:fill-zinc-400"

@@ -33,6 +33,9 @@ export const Footer = () => {
                 We bring you the cheapest and most affordable printing solutions
                 in Singapore.
               </span>
+              <span className="block mt-4 text-sm text-zinc-700 dark:text-zinc-200">
+                61 Bukit Batok Cres, #05-03 Heng Loong Building, Singapore 658078
+              </span>
             </div>
             <div className="flex items-center mt-3 -mx-[0.6rem]">
               <Email></Email>
